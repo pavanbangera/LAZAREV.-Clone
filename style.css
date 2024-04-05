@@ -401,3 +401,96 @@ nav .btn svg {
   border-radius: 30px;
   z-index: 99;
 }
+
+/* page3-end */
+
+
+/* page4-start */
+
+#page4{
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding:50px;
+}
+#page4 .p4-left{
+  width: 35%;   
+}
+#page4 .p4-left h1{
+  color: #111111;
+  font-size: 3.4vw;
+  font-weight: 600;
+  line-height: 3.4vw;
+}
+#page4 .p4-right{
+  width: 50%; 
+}
+#page4 .p4-right h5{
+  font-size: 1.2vw;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  margin-bottom: 2vw;
+}
+#page4 .p4-right p{
+  font-size: 1.7vw;
+  font-weight: 500;
+  color: #111111;
+  margin-bottom: 3vw;
+}
+#page4 .p4-right .p4-right-elem:last-child p:last-child {
+  margin-bottom: 0; 
+}
+
+/* page4-end */
+
+/* page5-start */
+
+#page5{
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:50px;
+
+}
+#page5 .card{
+  width: 380px;
+  height: 260px;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 5px;
+}
+#page5 .card .card-top{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#page5 .card .card-top h1{
+ color: #111111;
+ font-size: 60px;
+ font-weight: 500;
+}
+#page5 .card .card-top p{
+ color: #111111;
+ font-size: 14px;
+ font-weight: 500;
+}
+#page5 .card .card-bottom{
+  color: #B8B8B8;
+ font-size: 14px;
+ font-weight: 600;
+}
+
+/* page5-end */
+
