@@ -414,7 +414,7 @@ nav .btn svg {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding:50px;
+  padding:60px;
 }
 #page4 .p4-left{
   width: 35%;   
@@ -493,4 +493,48 @@ nav .btn svg {
 }
 
 /* page5-end */
+
+/* page6-start */
+
+#page6{
+  width: 100%;
+    height: 80vh;
+    padding: 50px;
+    padding-top: 100px;
+    background-color: #fff;
+   
+}
+#page6 .p6-container{
+  width: 60vw;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 50px;
+    position: relative;
+    display: flex;
+    
+
+}
+#page6 .p6-container h2{
+  float: left;
+  font-size: 1vw;
+  position: absolute;
+  font-weight: 500;
+  color: #111;
+  top: 10px;
+  left: 0;
+
+}
+#page6 .p6-container p{
+  font-size: 2.5vw;
+  color: #111;
+  font-weight: 400;
+
+}
+#page6 .p6-container span{
+  width: 20vw;
+  display: inline-block;
+
+}
+
+/* page6-end */
 

@@ -89,6 +89,6 @@ function page3Anim () {
 }
 
 
-navAnim();
-page2Anim();
-page3Anim();
+// navAnim();
+// page2Anim();
+// page3Anim();
