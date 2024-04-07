@@ -1,5 +1,6 @@
 function navAnim () {
-    var nav = document.querySelector("nav")
+    let nav = document.querySelector(".nav-part2");
+
 
     nav.addEventListener("mouseenter", function () {
         let tl = gsap.timeline()
@@ -35,7 +36,7 @@ function navAnim () {
         }, 'b')
         tl.to("#nav-bottom", {
             height: 0,
-            duration: 0.2
+            duration: 0.1
         }, 'b')
     })
 };
@@ -88,7 +89,20 @@ function page3Anim () {
 
 }
 
+function page7Anim () {
+    let containers = document.querySelectorAll(".p7-right");
+    containers.forEach((container) => {
+        container.addEventListener("mouseenter", () => {
+            container.childNodes[1].play();
+        })
+        container.addEventListener("mouseleave", () => {
+            container.childNodes[1].load();
+        })
+    })
+}
 
-// navAnim();
-// page2Anim();
-// page3Anim();
+
+navAnim();
+page2Anim();
+page3Anim();
+page7Anim();

@@ -323,11 +323,27 @@ nav .btn svg {
 .p2-elem svg{
   height: 0.8vw;
   transform: translate(0, 0) ;
-  transition: all .5s linear;
+  transition: all .3s linear;
 }
 .p2-elem:hover svg{
   height: 0.8vw;
-  transform: translate(5px ,-5px);
+  animation: arrowMove 0.1s linear;
+}
+
+@keyframes arrowMove {
+  0%,100%{
+    transform: translate(5px ,-5px);
+  }
+  25%{
+    transform: translate(0,0);
+  }
+  50%{
+    transform: translate(5px ,-5px);
+  }
+  75%{
+    transform: translate(0,0);
+  }
+  
 }
 
 .p2-elem img{
@@ -527,7 +543,7 @@ nav .btn svg {
 #page6 .p6-container p{
   font-size: 2.5vw;
   color: #111;
-  font-weight: 400;
+  font-weight: 500;
 
 }
 #page6 .p6-container span{
@@ -535,6 +551,95 @@ nav .btn svg {
   display: inline-block;
 
 }
-
 /* page6-end */
 
+/* page7-start */
+
+
+#page7{
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px;
+  display: flex;
+ flex-direction: column;
+ background-color: #fff;
+ gap: 80px;
+}
+#page7 .p7-container{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: space-around;
+}
+#page7 .p7-left{
+  width: 25%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #111;
+  padding-top: 20px;
+  border-top: 1px solid #B8B8B8 ;
+  transition: all ease .5s;
+}
+#page7 .p7-left:hover{
+  border-top: 1px solid #111 ;
+}
+#page7 .p7-left .p7-heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#page7 .p7-left h3,p{
+  color: #111;
+}
+#page7 .p7-left h3{
+  font-size: 2.5vw;
+  font-weight: 500;
+
+}
+#page7 .p7-left p{
+  font-size: 1.3vw;
+  font-weight: 500;
+
+}
+
+#page7 .p7-left i{
+  color: #111;
+  font-size: 1.3vw;
+  transform: translate(0, -5px) rotate(-45deg) ;
+  transition: all .3s linear;
+}
+#page7 .p7-left:hover i{
+  animation: arrowMove1 0.1s linear;
+
+}
+@keyframes arrowMove1 {
+  0%,100%{
+    transform: translate(5px ,-10px) rotate(-45deg);
+  }
+  25%{
+    transform: translate(0,-5px) rotate(-45deg);
+  }
+  50%{
+    transform: translate(5px ,-10px) rotate(-45deg);
+  }
+  75%{
+    transform: translate(0,-5px) rotate(-45deg);
+  }
+  
+}
+#page7 .p7-right{
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+#page7 .p7-right video{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transition: all ease .5s;
+}
+
+/* page7-end */
