@@ -136,6 +136,7 @@ nav .btn svg {
   justify-content: center;
   position: relative;
   padding-top: 20vh;
+  pointer-events: none;
 }
 
 #page1 h1 {
@@ -153,6 +154,7 @@ nav .btn svg {
   background-color: #0BA34E;
   transform: scale(1) rotate(0deg);
   transition: all 0.5s ease ;
+  pointer-events:fill;
 }
 #page1 h1 svg:hover {
   transform: scale(0.8) rotate(-30deg);
@@ -259,6 +261,7 @@ nav .btn svg {
   align-items: flex-start;
   justify-content: space-between;
   padding: 0 0 15vh 0;
+
 }
 .p2-left{
    width: 35%;
@@ -268,6 +271,7 @@ nav .btn svg {
    align-items: flex-start;
    justify-content: space-between;
    padding-top: 5vh;
+   pointer-events: none;
 }
 .p2-right{
    width: 50%;
@@ -298,6 +302,7 @@ nav .btn svg {
   position: relative;
   cursor: pointer;
   transition: border-top 0.5s linear;
+  z-index: 0;
 }
 .p2-elem:hover{
   border-top: 2px solid #fff;
@@ -313,7 +318,7 @@ nav .btn svg {
   font-size: 1.6vw;
   text-transform: capitalize;
   font-weight: 600;
-  z-index: 2;
+  z-index: 1;
 }
 .p2-elem p{
   font-size: 1vw;
@@ -354,6 +359,7 @@ nav .btn svg {
   border-radius: 50%;
   opacity: 0;
   scale: 0;
+  z-index: 0;
 }
 
 /* page2-end */
@@ -431,6 +437,7 @@ nav .btn svg {
   align-items: flex-start;
   justify-content: space-between;
   padding:60px;
+  pointer-events: none;
 }
 #page4 .p4-left{
   width: 35%;   
@@ -474,6 +481,7 @@ nav .btn svg {
   justify-content: center;
   flex-wrap: wrap;
   padding:50px;
+  pointer-events: none;
 
 }
 #page5 .card{
@@ -527,6 +535,7 @@ nav .btn svg {
     margin-right: 50px;
     position: relative;
     display: flex;
+    pointer-events: none;
     
 
 }
@@ -538,12 +547,14 @@ nav .btn svg {
   color: #111;
   top: 10px;
   left: 0;
+  pointer-events: none;
 
 }
 #page6 .p6-container p{
   font-size: 2.5vw;
   color: #111;
   font-weight: 500;
+  pointer-events: none;
 
 }
 #page6 .p6-container span{
@@ -581,6 +592,7 @@ nav .btn svg {
   padding-top: 20px;
   border-top: 1px solid #B8B8B8 ;
   transition: all ease .5s;
+  cursor: pointer;
 }
 #page7 .p7-left:hover{
   border-top: 1px solid #111 ;
@@ -634,12 +646,49 @@ nav .btn svg {
   height: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+.invisible{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
+  z-index: 1;
 }
 #page7 .p7-right video{
  width: 100%;
  height: 100%;
  object-fit: cover;
  transition: all ease .5s;
+}
+#page7 .p7-right .p7-bubble{
+ width: 150px;
+ height: 150px;
+ position: absolute;
+ background-color: #4F5BFF;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ justify-content: space-around;
+ padding: 20px;
+ opacity: 0;
+ scale: 0;
+ z-index: 0;
+}
+#page7 .p7-right h4{
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+}
+#page7 .p7-right i{
+  font-size: 16px;
+  transform: translate(0, -5px) rotate(-45deg) ;
+  align-self: flex-end;
+  color: #fff;
 }
 
 /* page7-end */
