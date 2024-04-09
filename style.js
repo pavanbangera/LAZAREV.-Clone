@@ -158,43 +158,88 @@ function page8Anim () {
     let boxes = document.querySelectorAll(".p8-box");
     boxes.forEach(box => {
         box.addEventListener("mouseenter", () => {
+            box.children[3].play();
             let t1 = gsap.timeline();
             t1.to(box.children[1], {
-                display: "none"
+                display: "none",
+                duration: 0.3
 
             }, "p8")
             t1.to(box.children[2], {
-                display: "none"
+                display: "none",
+                duration: 0.2
             }, "p8")
             t1.to(box.children[3], {
                 height: "85%",
-                duration: 1
+                duration: 0.1
 
             }, "p8")
         })
         box.addEventListener("mouseleave", () => {
             let t1 = gsap.timeline();
             t1.to(box.children[1], {
-                display: "block"
+                display: "block",
+                duration: 0.2
 
             }, "p8")
             t1.to(box.children[2], {
-                display: "block"
+                display: "block",
+                duration: 0.3
             }, "p8")
             t1.to(box.children[3], {
                 height: "50%",
-                duration: 1
+                duration: 0.3
 
             }, "p8")
+            box.children[3].load();
         })
+
     })
 }
 
-// locoScroll();
-// page1Anim();
+function page9Anim () {
+    let details = document.querySelectorAll(".p9-detail");
+    details.forEach((box) => {
+        box.addEventListener("mouseenter", () => {
+            let t1 = gsap.timeline();
+            t1.to(box.lastElementChild, {
+                opacity: 1,
+                y: 30
+            })
+        })
+        box.addEventListener("mouseleave", () => {
+            let t1 = gsap.timeline();
+            t1.to(box.lastElementChild, {
+                opacity: 0,
+                y: 0
+            })
+        })
+    })
+    let dropDowns = document.getElementsByTagName('details');
 
-// navAnim();
-// page2Anim();
-// page3Anim();
-// page7Anim();
-// page8Anim();
+    Array.from(dropDowns).forEach(element => {
+        element.addEventListener("toggle", () => {
+            if (element.hasAttribute("open")) {
+                element.children[0].children[0].children[0].classList.remove("close");
+                element.children[0].children[0].children[0].classList.add("open");
+            } else {
+                element.children[0].children[0].children[0].classList.remove("open");
+                element.children[0].children[0].children[0].classList.add("close");
+            }
+        });
+    });
+
+
+}
+
+
+
+locoScroll();
+page1Anim();
+
+navAnim();
+page2Anim();
+page3Anim();
+page7Anim();
+page8Anim();
+page9Anim();
