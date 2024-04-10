@@ -1,14 +1,40 @@
 function locoScroll () {
 
+    gsap.registerPlugin(ScrollTrigger);
 
     const locoScroll = new LocomotiveScroll({
         el: document.querySelector("#main"),
-        smooth: true
+        smooth: true,
+
+        // for tablet smooth
+        tablet: { smooth: true },
+
+        // for mobile
+        smartphone: { smooth: true }
+    });
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy("#main", {
+        scrollTop (value) {
+            return arguments.length
+                ? locoScroll.scrollTo(value, 0, 0)
+                : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect () {
+            return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight
+            };
+        }
     });
 
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    ScrollTrigger.refresh();
+
 }
-
-
 
 
 
@@ -231,15 +257,29 @@ function page9Anim () {
 
 
 }
+function page10Anim () {
 
-
+    gsap.from(".p10-content h4", {
+        x: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".p10-content",
+            scroller: "#main",
+            // markers: true,
+            start: "top 80%",
+            end: "top 20%",
+            scrub: true
+        }
+    })
+}
 
 locoScroll();
-page1Anim();
+page10Anim();
+// page1Anim();
 
-navAnim();
-page2Anim();
+// navAnim();
+// page2Anim();
 page3Anim();
-page7Anim();
-page8Anim();
-page9Anim();
+// page7Anim();
+// page8Anim();
+// page9Anim();
