@@ -267,7 +267,7 @@ function page10Anim () {
             scroller: "#main",
             // markers: true,
             start: "top 80%",
-            end: "top 20%",
+            end: "top -20%",
             scrub: true
         }
     })

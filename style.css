@@ -1216,6 +1216,15 @@ background-color: #B8B8B8;
 /* #responsive-start */
 
 @media (max-width:762px){
+  * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* Remove tap highlight */
+    -webkit-touch-callout: none; /* Disable callout */
+    -webkit-user-select: none; /* Disable text selection */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none; /* Remove outline */
+  }
  nav{
   height: 60px;
   align-items: center;
@@ -1245,13 +1254,16 @@ background-color: #B8B8B8;
  #page1{
   height: auto;
   padding: 40px;
-  padding-top: 100px;
+  padding-top: 150px;
   align-items: flex-start;
 
  }
+ #page1 h1:first-child {
+  white-space: nowrap;
+}
  #page1 h1 {
-  font-size: 80px;
-  line-height:80px;
+  font-size: 4rem;
+  line-height:4rem;
   font-weight: 800;
   letter-spacing: 0;
 }
@@ -1270,6 +1282,7 @@ background-color: #B8B8B8;
   font-size: 24px;
   color: #fff;
   width: 90%;
+  margin-bottom: 2px;
 }
 #page1-something {
   display: flex;
@@ -1434,10 +1447,23 @@ background-color: #B8B8B8;
 #page5{
 
   padding:30px;
-  pointer-events: none;
 
 }
-
+#page5 .card{
+  width: 380px;
+  height: 210px;
+}
+#page5 .card .card-top h1{
+  color: #111111;
+  font-size: 60px;
+  font-weight: 500;
+ }
+ #page5 .card .card-top h1{
+  font-size: 3rem;
+ }
+ #page5 .card .card-top p{
+  font-size: 16px;
+ }
 /* page5-end */
 /* page6-start */
 
@@ -1689,7 +1715,7 @@ background-color: #B8B8B8;
     font-size: 1rem;
     padding: 5px 5px;
     display: flex;
-    width: 50%;
+    width: 70%;
    }
    .p10-content span{
     font-size: 1rem;
@@ -1721,7 +1747,7 @@ footer{
   padding-bottom: 40px;
 }
 footer>p, .foot-right{
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 footer .foot-right{
   width: 40%;
