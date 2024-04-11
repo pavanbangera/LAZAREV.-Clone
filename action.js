@@ -273,13 +273,37 @@ function page10Anim () {
     })
 }
 
+function page11Anim () {
+    let p11BubbleContiner = document.querySelector(".p11-left .invisible");
+
+    p11BubbleContiner.addEventListener("mouseenter", () => {
+        gsap.to(".p11-bubble", {
+            opacity: 1,
+            scale: 1
+        })
+    })
+    p11BubbleContiner.addEventListener("mouseleave", () => {
+        gsap.to(".p11-bubble", {
+            opacity: 0,
+            scale: 0
+        })
+    })
+    p11BubbleContiner.addEventListener("mousemove", (px) => {
+        gsap.to(".p11-bubble", {
+            x: px.x - p11BubbleContiner.getBoundingClientRect().x - 80,
+            y: px.y - p11BubbleContiner.getBoundingClientRect().y - 300
+        })
+    })
+}
+
 locoScroll();
 page10Anim();
-// page1Anim();
+page1Anim();
 
-// navAnim();
-// page2Anim();
+navAnim();
+page2Anim();
 page3Anim();
-// page7Anim();
-// page8Anim();
-// page9Anim();
+page7Anim();
+page8Anim();
+page9Anim();
+page11Anim();

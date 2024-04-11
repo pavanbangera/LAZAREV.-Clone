@@ -664,6 +664,7 @@ nav .btn svg {
   position: absolute;
   background-color: transparent;
   z-index: 1;
+  top: 0;
 }
 #page7 .p7-right video{
  width: 100%;
@@ -968,6 +969,7 @@ z-index: 1;
   background-color: #fff;
   color: #111;
   padding: 80px;
+  padding-bottom: 10px;
   position: relative;
 }
 #page10>h2{
@@ -1022,7 +1024,7 @@ z-index: 1;
     width: 100%;
     height: 400px;
     border-top: 1px solid #dadada;
-    padding: 30px 0;
+    padding: 30px 0 0;
    }
 
 
@@ -1088,10 +1090,95 @@ z-index: 1;
     transform: translateX(50%);
   }
 
-  #page11{
-    width: 100%;
-    height: 100vh;
-
-  }
-
 /* page10-end */
+
+/* page11-start */
+
+#page11{
+  width: 100%;
+  height: auto;
+  padding: 80px;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #fff;
+  /* border-bottom: 1px solid #B8B8B8; */
+
+}
+.p11-left{
+width: 40%;
+height: auto;
+position: relative;
+cursor: pointer;
+margin-left: 40%;
+/* background-color: #0BA34E; */
+}
+.p11-left h1{
+font-size: 4.5vw;
+text-transform: capitalize;
+}
+.p11-left .p11-bubble{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-color: #0DA34E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  opacity: 0;
+  scale: 0;
+  z-index: 0;
+}
+.p11-left .p11-bubble i{
+  font-size: 16px;
+  transform: translate(0, -5px) rotate(-45deg) ;
+  align-self: flex-end;
+  color: #fff;
+}
+.p11-right{
+width: 40%;
+height: auto;
+background-color: #0BA34E;
+}
+
+/* page11-end */
+
+footer{
+  width: 100%;
+  height: 40px;
+  padding: 30px 90px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #111;
+  color: #fff ;
+  position: relative;
+}
+footer p{
+  color: #fff;
+}
+footer>p{
+  width: 50%;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+footer .foot-right{
+  width: 30%;
+  font-size: 1.2vw;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+footer .foot-top{
+position: absolute;
+top: 0;
+width: 90%;
+left: 5%;
+height: 1px;
+background-color: #B8B8B8;
+}
