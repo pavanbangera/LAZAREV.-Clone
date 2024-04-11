@@ -110,19 +110,19 @@ function page2Anim () {
 
     elems.forEach(elem => {
         elem.lastElementChild.addEventListener("mouseenter", () => {
-            gsap.to(elem.childNodes[5], {
+            gsap.to(elem.childNodes[1], {
                 opacity: 1,
                 scale: 1
             })
         })
         elem.lastElementChild.addEventListener("mouseleave", () => {
-            gsap.to(elem.childNodes[5], {
+            gsap.to(elem.childNodes[1], {
                 opacity: 0,
                 scale: 0
             })
         })
         elem.lastElementChild.addEventListener("mousemove", (px) => {
-            gsap.to(elem.childNodes[5], {
+            gsap.to(elem.childNodes[1], {
                 x: px.x - elem.getBoundingClientRect().x - 50,
                 y: px.y - elem.getBoundingClientRect().y - 50
             })
@@ -300,10 +300,20 @@ locoScroll();
 page10Anim();
 page1Anim();
 
-navAnim();
-page2Anim();
 page3Anim();
 page7Anim();
-page8Anim();
 page9Anim();
 page11Anim();
+
+function applyMediaQuery () {
+    if (window.matchMedia("(min-width: 762px)").matches) {
+        navAnim();
+        page2Anim();
+        page8Anim();
+    } else {
+
+    }
+}
+
+window.onload = applyMediaQuery;
+window.addEventListener("resize", applyMediaQuery);
